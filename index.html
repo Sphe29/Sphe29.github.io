@@ -1,33 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css"/>
     <title>Simple Website</title>
+
 </head>
+
 <body>
-    <body style="background-color: lightgrey;"></body>
-    <h1> Siphesihle Mnyengeza</h1>
-    <h2> My contact information</h2>
-    <h3> Email address: sihle.mnyengeza@gmail.com
-        <a 
-        href = https://www.linkedin.com/in/siphesihle-mnyengeza-873814220/>
-    </a>
-    </h3>
-    <div>
-        <nav>
-            <img src =
-             https://media.licdn.com/dms/image/D4D03AQFbvdlM7eYxbw/profile-displayphoto-shrink_800_800/0/1677442900550?e=1691020800&v=beta&t=JD7rBj_CgE9swrHfsCHZE18WQuGWC6pi78gtmHA8MBI
-             >
-            <p>I am a down to earth poet who has recentlu discovered their love for coding.
-                I love reading books and a fanatic for anime.
-            </p>
-            <ul>
-                
-            </ul>   
-        <nav>
-    </div>
+
+   <nav>
+    <h1>S<span>phe</span></h1>
+    <img class="hamBurger" src="./assets/hamBurger menu.svg" alt="hamBurger menu"/>
+   </nav>
+
+   <section class="hero-section">
+
+    <section class="hero-section-picture">
+        <img src="./assets/picture.png" class="sphe-pic" alt = "myPicture"/>
+
+    </section>
+
+    <section class="hero-section-bio">
+        <h2 class="intro"> Hello! My name is Siphesihle Mnyengeza.</h2>
+        <h4 class="bio"> I am currently a Web Dev recruit at Umuzi for a full stack web development in javascript</h4>
+        <button class="learn-more">Learn More</button>
+    </section>
+
+   </section>
+   <section class = "aboutMe" >
+    <p>Bio</p>
+    <h1> About Me</h1>
+    <h5> An upcoming Web Developer with good communication skills and basic understanding of node.js.
+        I can work well in a team and consistent with learning and applying what I have learnt in projects and challenges.
+        I enjoy meeting different people within a team and building proffesional relationships with different techies.</h5>
+   </section>
+   <section class = "skills" >
+    <p> Services</p>
+    <h1>Skill-Set</h1>
+
+    <section class = "githubCard">
+        <img src = "./assets/GitHub.svg" class = "github-icon"  alt=" GITHUB icon "/>
+        <h4> Git Version Control</h4>
+        <h5> I have a good understanding of git version control and can sufficiently apply it within a team.</h5>
+    </section>
+
+    <section class = "jsCard">
+        <img src = "./assets/JavaScript.svg" class = "javascript-icon"  alt=" JS Icon"/>
+        <h4> Javascript</h4>
+        <h5> I have a good understanding of foundational code-base and can moderately apply it into problem solving.</h5>
+    </section>
+
+    <section class = "htmlCard">
+        <img src = "./assets/Html 5.svg" class = "html-icon"  alt=" HTML Icon"/>
+        <h4> HTML</h4>
+        <h5> I have a good understanding of HTML basics and can build a simple website. </h5>
+    </section>
+
+    <section class = "cssCard">
+        <img src = "./assets/CSS3.svg" class = "css-icon"  alt=" CSS Icon"/>
+        <h4> CSS</h4>
+        <h5> I have a good understanding of CSS and can style a simple website.</h5>
+    </section>
+
+   </section>
+
+   <section class="portfolio">
+    <p>Portfolio</p>
+    <h1>Profile</h1>
+
+    <section class="construction">
+        <img src="./assets/Error.svg"/>
+        <h4>Portfolio Coming Soon!</h4>
+    </section>
+   </section>
+
+   <section class="connection">
+    <p> Connection </p>
+    <h1> Connect with me </h1>
+    <input class ="email" type="text" placeholder="Email"/>
+    <textarea class="message" placeholder="Message"></textarea>
+    <button class ="send">Send</button>
+   </section>
+
+   <section class="contact-links">
+    <p> Social Links </p>
+    <h1> Reach Me </h1>
+    <section class="links">
+        <a href="https://www.linkedin.com/in/siphesihle-mnyengeza-873814220/" target="_blank">
+            <img alt="linkedin" src="./assets/LinkedIn.svg"/>
+        </a>
+        <a href="https://github.com/Sphe29" target="_blank">
+            <img alt="github" src="./assets/GitHub.svg"/>
+        </a>
+        <a href="mailto:sihle.mnyengeza@gmail.com">
+            <img alt="email" src="./assets/Email.svg"/>
+        </a>
+    </section>
+   
+   
+   </section>
 </body>
+
 </html>
