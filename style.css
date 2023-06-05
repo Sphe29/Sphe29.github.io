@@ -11,9 +11,17 @@ h1, h2, h3, h4, p, span{
 
 nav{
     background-color:#212839;
-    padding: 20px 40px;
+    padding: 20px 90px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+nav .sphe-logo{
+    text-decoration: none;
 }
 nav h1{
     color: white;
@@ -22,6 +30,30 @@ nav span{
     color: #C682BF;
 }
 
+nav .hamBurger{
+    cursor: pointer;
+    display: none;
+}
+nav .nav-menu{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    margin: 0;
+}
+
+nav .nav-item{
+    list-style-type: none;
+    padding: 0;
+}
+nav .nav-link{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav .nav-link:hover{
+    color: #C682BF;
+}
 .hero-section{
     display: flex;
     flex-direction: column;
@@ -29,20 +61,31 @@ nav span{
 }
 section .hero-section-picture img{
     width: 200px;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 section .hero-section-bio{
     color: white;
     margin: 0 auto;
     text-align: center;
-    padding-block: 30px;
 }
 
+section .intro-container{
+    max-width: 440px;
+}
+
+section .intro{
+    padding-inline: 20px;
+    padding-top: 15px;
+}
+section .bio-container{
+    max-width: 400px;
+}
 
 section .bio{
     color: #ACACAC;
     padding-block: 30px;
+    padding-inline: 20px;
 }
 
 section .learn-more{
@@ -58,6 +101,7 @@ section .learn-more{
     flex-direction: column;
     align-items: center;
     padding: 20px 40px;
+    margin-top: 60px;
 } 
 .aboutMe h1 {
     color:#C682BF
@@ -106,13 +150,13 @@ section .learn-more{
     display: flex;
     flex-direction: column;
     align-items: center; 
-    margin-top: 30px;
+    margin-top: 80px;
 }
 .connection h1{
     color: #C682BF;
     margin-bottom: 20px;
 }
-section .email, .message{
+form .email, .message{
     color: white;
     background-color: #212839;
     border: none;
@@ -121,16 +165,17 @@ section .email, .message{
     margin-block: 5px;
 }
 
-section .message{
+form .message{
     height: 100px;
 }
-section .send {
+form .send {
     color: white;
     background-color: #C682BF;
     border: none;
     cursor: pointer;
     padding: 12px 50px;
     margin-top: 20px;
+    text-decoration: none;
 }
 
 .contact-links{
@@ -147,5 +192,55 @@ section .send {
 }
 
 .links a{
-    
+    text-decoration: none;
+}
+
+nav .bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #C682BF;
+}
+
+@media(max-width: 768px){
+    nav .hamBurger{
+        display: block;
+    }
+
+    nav .hamBurger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    nav .hamBurger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    nav .hamBurger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    nav .nav-menu{
+        position: fixed;
+        left: -110%;
+        top: 5%;
+        gap: 0;
+        flex-direction: column;
+        background-color: #212839;
+        height: 300px;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    nav .nav-item{
+        margin: 16px 0;
+    }
+
+    nav .nav-menu.active{
+        left: 0;
+        padding: 0;
+    }
 }
