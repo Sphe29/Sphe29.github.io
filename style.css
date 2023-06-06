@@ -66,7 +66,6 @@ section .hero-section-picture img{
 
 section .hero-section-bio{
     color: white;
-    margin: 0 auto;
     text-align: center;
 }
 
@@ -93,6 +92,7 @@ section .learn-more{
     background-color: #C682BF;
     border: none;
     cursor: pointer;
+    text-decoration: none;
     padding: 12px 50px;
 }
 .aboutMe {
@@ -205,6 +205,60 @@ nav .bar{
     background-color: #C682BF;
 }
 
+@media(min-width: 700px){
+    .aboutMe h1, .skills h1, .portfolio h1, .connection h1, .contact-links h1{
+        font-size: 35px;
+    }
+    .aboutMe h5{
+        font-size: 17px;
+    }
+    section .intro{
+        font-size: 30px;
+    }
+    .top-card, .bottom-card{
+        display: flex;
+        gap: 20px;
+    }
+}
+
+@media(min-width: 940px){
+    .hero-section{
+        flex-direction: row-reverse;
+        justify-content: center;
+        
+    }
+    .hero-section-bio .bio{
+        font-size: 20px;
+        text-align: left;
+        max-width: 440px;
+    
+    }
+    .hero-section-picture{
+        
+    }
+    .hero-section-bio .intro{
+       text-align: left;
+       max-width: 340px;
+    }
+    .hero-section-bio{
+        margin-top: 120px;
+        margin-right: 50px;
+    }
+
+    .aboutMe h5{
+        max-width: 720px;
+    }
+    .aboutMe {
+        text-align: left;
+    }
+    .learn-more{
+        
+    }
+
+    .aboutMe p, .aboutMe h1{
+        text-align: left;
+    }
+}
 @media(max-width: 768px){
     nav .hamBurger{
         display: block;
