@@ -279,7 +279,7 @@ nav .bar{
     nav .nav-menu{
         position: fixed;
         left: -110%;
-        top: 5%;
+        top: 10%;
         gap: 0;
         flex-direction: column;
         background-color: #212839;
