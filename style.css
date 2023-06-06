@@ -1,295 +1,306 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;300&display=swap');
-body{
-    background-color: #1D212E;
-    margin: 0;
-    font-family: Barlow, 'sans-serif';
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;300&display=swap");
+body {
+  background-color: #1d212e;
+  margin: 0;
+  font-family: Barlow, "sans-serif";
 }
 
-h1, h2, h3, h4, p, span{
-    margin: 0;
+h1,
+h2,
+h3,
+h4,
+p,
+span {
+  margin: 0;
 }
 
-nav{
-    background-color:#212839;
-    padding: 20px 90px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+nav {
+  background-color: #212839;
+  padding: 20px 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
-nav .sphe-logo{
-    text-decoration: none;
+nav .sphe-logo {
+  text-decoration: none;
 }
-nav h1{
-    color: white;
+nav h1 {
+  color: white;
 }
-nav span{
-    color: #C682BF;
-}
-
-nav .hamBurger{
-    cursor: pointer;
-    display: none;
-}
-nav .nav-menu{
-    display: flex;
-    gap: 25px;
-    align-items: center;
-    margin: 0;
+nav span {
+  color: #c682bf;
 }
 
-nav .nav-item{
-    list-style-type: none;
-    padding: 0;
+nav .hamBurger {
+  cursor: pointer;
+  display: none;
 }
-nav .nav-link{
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-nav .nav-link:hover{
-    color: #C682BF;
-}
-.hero-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-section .hero-section-picture img{
-    width: 200px;
-    margin-top: 100px;
+nav .nav-menu {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  margin: 0;
 }
 
-section .hero-section-bio{
-    color: white;
-    text-align: center;
+nav .nav-item {
+  list-style-type: none;
+  padding: 0;
+}
+nav .nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-section .intro-container{
-    max-width: 440px;
+nav .nav-link:hover {
+  color: #c682bf;
+}
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section .hero-section-picture img {
+  width: 200px;
+  margin-top: 100px;
 }
 
-section .intro{
-    padding-inline: 20px;
-    padding-top: 15px;
-}
-section .bio-container{
-    max-width: 400px;
+section .hero-section-bio {
+  color: white;
+  text-align: center;
 }
 
-section .bio{
-    color: #ACACAC;
-    padding-block: 30px;
-    padding-inline: 20px;
+section .intro-container {
+  max-width: 440px;
 }
 
-section .learn-more{
-    color: white;
-    background-color: #C682BF;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    padding: 12px 50px;
+section .intro {
+  padding-inline: 20px;
+  padding-top: 15px;
+}
+section .bio-container {
+  max-width: 400px;
+}
+
+section .bio {
+  color: #acacac;
+  padding-block: 30px;
+  padding-inline: 20px;
+}
+
+section .learn-more {
+  color: white;
+  background-color: #c682bf;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 12px 50px;
 }
 .aboutMe {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 40px;
-    margin-top: 60px;
-} 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 40px;
+  margin-top: 60px;
+}
 .aboutMe h1 {
-    color:#C682BF
+  color: #c682bf;
 }
 .aboutMe h5 {
-    text-align: center;
-    margin-block: 20px;
-    width: 250 px;
-    
+  text-align: center;
+  margin-block: 20px;
+  width: 250 px;
 }
 .skills {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .skills h1 {
-    color:#C682BF
+  color: #c682bf;
 }
 
-.portfolio, .construction{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.portfolio,
+.construction {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.portfolio{
-    margin-block: 50px;
+.portfolio {
+  margin-block: 50px;
 }
 
-.portfolio h1{
-    color: #C682BF;
-    margin-bottom: 10px;
+.portfolio h1 {
+  color: #c682bf;
+  margin-bottom: 10px;
 }
 
-
-.githubCard, .jsCard, .htmlCard, .cssCard{
-    background-color: #212839;
-    padding: 30px 20px;
-    margin-block: 20px;
-    width: 250px;
+.githubCard,
+.jsCard,
+.htmlCard,
+.cssCard {
+  background-color: #212839;
+  padding: 30px 20px;
+  margin-block: 20px;
+  width: 250px;
 }
 .connection {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    margin-top: 80px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
 }
-.connection h1{
-    color: #C682BF;
-    margin-bottom: 20px;
+.connection h1 {
+  color: #c682bf;
+  margin-bottom: 20px;
 }
-form .email, .message{
-    color: white;
-    background-color: #212839;
-    border: none;
-    width: 300px;
-    height: 40px;
-    margin-block: 5px;
+form .email,
+.message {
+  color: white;
+  background-color: #212839;
+  border: none;
+  width: 300px;
+  height: 40px;
+  margin-block: 5px;
 }
 
-form .message{
-    height: 100px;
+form .message {
+  height: 100px;
 }
 form .send {
-    color: white;
-    background-color: #C682BF;
-    border: none;
-    cursor: pointer;
-    padding: 12px 50px;
-    margin-top: 20px;
-    text-decoration: none;
+  color: white;
+  background-color: #c682bf;
+  border: none;
+  cursor: pointer;
+  padding: 12px 50px;
+  margin-top: 20px;
+  text-decoration: none;
 }
 
-.contact-links{
-    color: white;
+.contact-links {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 30px;
+}
+.contact-links h1 {
+  color: #c682bf;
+  margin-bottom: 20px;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+nav .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #c682bf;
+}
+
+@media (min-width: 700px) {
+  .aboutMe h1,
+  .skills h1,
+  .portfolio h1,
+  .connection h1,
+  .contact-links h1 {
+    font-size: 35px;
+  }
+  .aboutMe h5 {
+    font-size: 17px;
+  }
+  section .intro {
+    font-size: 30px;
+  }
+  .top-card,
+  .bottom-card {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-block: 30px;
-}
-.contact-links h1{
-    color: #C682BF;
-    margin-bottom: 20px;
-    
+    gap: 20px;
+  }
 }
 
-.links a{
-    text-decoration: none;
-}
+@media (min-width: 940px) {
+  .hero-section {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  .hero-section-bio .bio {
+    font-size: 20px;
+    text-align: left;
+    max-width: 440px;
+  }
 
-nav .bar{
+  .hero-section-bio .intro {
+    text-align: left;
+    max-width: 340px;
+  }
+  .hero-section-bio {
+    margin-top: 120px;
+    margin-right: 50px;
+  }
+
+  .aboutMe h5 {
+    max-width: 720px;
+  }
+  .aboutMe {
+    text-align: left;
+  }
+
+  .aboutMe p,
+  .aboutMe h1 {
+    text-align: left;
+  }
+}
+@media (max-width: 768px) {
+  nav .hamBurger {
     display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #C682BF;
-}
+  }
 
-@media(min-width: 700px){
-    .aboutMe h1, .skills h1, .portfolio h1, .connection h1, .contact-links h1{
-        font-size: 35px;
-    }
-    .aboutMe h5{
-        font-size: 17px;
-    }
-    section .intro{
-        font-size: 30px;
-    }
-    .top-card, .bottom-card{
-        display: flex;
-        gap: 20px;
-    }
-}
+  nav .hamBurger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
 
-@media(min-width: 940px){
-    .hero-section{
-        flex-direction: row-reverse;
-        justify-content: center;
-        
-    }
-    .hero-section-bio .bio{
-        font-size: 20px;
-        text-align: left;
-        max-width: 440px;
-    
-    }
-    
-    .hero-section-bio .intro{
-       text-align: left;
-       max-width: 340px;
-    }
-    .hero-section-bio{
-        margin-top: 120px;
-        margin-right: 50px;
-    }
+  nav .hamBurger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
 
-    .aboutMe h5{
-        max-width: 720px;
-    }
-    .aboutMe {
-        text-align: left;
-    }
+  nav .hamBurger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 
-    .aboutMe p, .aboutMe h1{
-        text-align: left;
-    }
-}
-@media(max-width: 768px){
-    nav .hamBurger{
-        display: block;
-    }
+  nav .nav-menu {
+    position: fixed;
+    left: -110%;
+    top: 10%;
+    gap: 0;
+    flex-direction: column;
+    background-color: #212839;
+    height: 300px;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
 
-    nav .hamBurger.active .bar:nth-child(2){
-        opacity: 0;
-    }
+  nav .nav-item {
+    margin: 16px 0;
+  }
 
-    nav .hamBurger.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    nav .hamBurger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    nav .nav-menu{
-        position: fixed;
-        left: -110%;
-        top: 10%;
-        gap: 0;
-        flex-direction: column;
-        background-color: #212839;
-        height: 300px;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-    }
-
-    nav .nav-item{
-        margin: 16px 0;
-    }
-
-    nav .nav-menu.active{
-        left: 0;
-        padding: 0;
-    }
+  nav .nav-menu.active {
+    left: 0;
+    padding: 0;
+  }
 }
