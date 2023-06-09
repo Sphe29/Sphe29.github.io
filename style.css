@@ -92,14 +92,6 @@ section .bio {
   padding-inline: 20px;
 }
 
-section .learn-more {
-  color: white;
-  background-color: #c682bf;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  padding: 12px 50px;
-}
 .aboutMe {
   color: white;
   display: flex;
@@ -124,6 +116,7 @@ section .learn-more {
 }
 .skills h1 {
   color: #c682bf;
+  margin-top: 20px;
 }
 
 .portfolio,
@@ -182,7 +175,7 @@ form .send {
   border: none;
   cursor: pointer;
   padding: 12px 50px;
-  margin-top: 20px;
+  margin-block: 20px;
   text-decoration: none;
 }
 
@@ -260,7 +253,6 @@ nav .bar {
     text-align: left;
   }
 
-  .aboutMe p,
   .aboutMe h1 {
     text-align: left;
   }
