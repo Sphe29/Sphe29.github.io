@@ -1,163 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-
-    <title>Simple Website</title>
-  </head>
-
-  <body>
-    <nav>
-      <a class="sphe-logo" href="#">
-        <h1>S<span>phe</span></h1>
-      </a>
-      <section class="hamBurger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </section>
-
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a class="nav-link" href="#home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#aboutme">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#portfolio">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contacts">Contacts</a>
-        </li>
-      </ul>
-    </nav>
-    <script src="src/srcipt.js"></script>
-
-    <section id="home" class="hero-section">
-      <section class="hero-section-picture">
-        <img src="./assets/picture.png" class="sphe-pic" alt="myPicture" />
-      </section>
-
-      <section class="hero-section-bio">
-        <section class="intro-container">
-          <h2 class="intro">Hello! My name is Siphesihle Mnyengeza.</h2>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <title>Simple Website</title>
+    </head>
+    <body>
+        <nav>
+            <a class="sphe-logo" href="#">
+                <h1>
+                    S<span>phe</span>
+                </h1>
+            </a>
+            <aside class="hamBurger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </aside>
+          
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#aboutme">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacts">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+        <script src="src/srcipt.js"></script>
+        <section id="home" class="hero-section">
+            <h2>My Hero Section</h2>
+            <section class="hero-section-picture">
+                <h2>My Hero Section Picture</h2>
+                <img src="./assets/picture.png" class="sphe-pic" alt="myPicture">
+            </section>
+            <!-- added here -->
+            <section class="hero-section-bio">
+                <!-- <h2>My Hero Section Bio</h2> -->
+                <!-- <section class="intro-container"> -->
+                    <h2 class="intro">Hello! My name is Siphesihle Mnyengeza.</h2>
+                <!-- </section> -->
+            </section>
         </section>
+        <!-- added here -->
         <section class="bio-container">
-          <h4 class="bio">
-            I am currently a Web development recruit at Umuzi for a full stack
-            web development programme in javascript.
-          </h4>
+            <h4 class="bio">
+                I am currently a Web development recruit at Umuzi for a full stack
+        web development programme in javascript.
+            </h4>
         </section>
-      </section>
-    </section>
-
-    <section id="aboutme" class="aboutMe">
-      <h1>About</h1>
-      <h5>
-        I am an upcoming Web Developer with good communication skills and a
-        basic understanding of node.js. I can work well in a team and am very
-        consistent with learning. I aspire to apply what I have learnt in
-        projects and challenges. I enjoy meeting different personalities within
-        collaborations and building professional relationships with various
-        techies.
-      </h5>
-    </section>
-
-    <section id="skills" class="skills">
-      <h1>Skills</h1>
-
-      <section class="top-card">
-        <section class="githubCard">
-          <img
-            src="./assets/GitHub.svg"
-            class="github-icon"
-            alt=" GITHUB icon "
-          />
-          <h4>Git Version Control</h4>
-          <h5>
-            I have a good understanding of git version control and can
-            sufficiently apply it within a team.
-          </h5>
+        <!-- </section> -->
+        <section id="aboutme" class="aboutMe">
+            <h2>About</h2>
+            <h5>
+                I am an upcoming Web Developer with good communication skills and a
+      basic understanding of node.js. I can work well in a team and am very
+      consistent with learning. I aspire to apply what I have learnt in
+      projects and challenges. I enjoy meeting different personalities within
+      collaborations and building professional relationships with various
+      techies.
+            </h5>
         </section>
-
-        <section class="jsCard">
-          <img
-            src="./assets/JavaScript.svg"
-            class="javascript-icon"
-            alt=" JS Icon"
-          />
-          <h4>Javascript</h4>
-          <h5>
-            I have a good understanding of foundational code-base and can
-            moderately apply it into problem solving.
-          </h5>
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <!-- <div class="github-card"> -->
+            <section class="githubCard">
+                <img src="./assets/GitHub.svg" class="github-icon" alt=" GITHUB icon ">
+                <h4>Git Version Control</h4>
+                <h5>
+                    I have a good understanding of git version control and can
+          sufficiently apply it within a team.
+                </h5>
+            </section>
+            <section class="jsCard">
+                <img src="./assets/JavaScript.svg" class="javascript-icon" alt=" JS Icon">
+                <h4>Javascript</h4>
+                <h5>
+                    I have a good understanding of foundational code-base and can
+          moderately apply it into problem solving.
+                </h5>
+            </section>
+            <!-- </div> -->
+            <!-- <section class="html-card"> -->
+            <section class="htmlCard">
+                <img src="./assets/Html5.svg" class="html-icon" alt=" HTML Icon">
+                <h4>HTML</h4>
+                <h5>
+                    I have a good understanding of HTML basics and can build a simple
+          website.
+                </h5>
+            </section>
+            <section class="cssCard">
+                <img src="./assets/CSS3.svg" class="css-icon" alt=" CSS Icon">
+                <h4>CSS</h4>
+                <h5>
+                    I have a good understanding of CSS and can style a simple website.
+                </h5>
+            </section>
+            <!-- </section> -->
         </section>
-      </section>
-
-      <section class="bottom-card">
-        <section class="htmlCard">
-          <img src="./assets/Html 5.svg" class="html-icon" alt=" HTML Icon" />
-          <h4>HTML</h4>
-          <h5>
-            I have a good understanding of HTML basics and can build a simple
-            website.
-          </h5>
+        <section id="portfolio" class="portfolio">
+            <h2>Portfolio</h2>
+            <section class="construction">
+                <img src="./assets/Error.svg" alt=" Error Icon">
+                <h4>Portfolio Coming Soon!</h4>
+            </section>
         </section>
-
-        <section class="cssCard">
-          <img src="./assets/CSS3.svg" class="css-icon" alt=" CSS Icon" />
-          <h4>CSS</h4>
-          <h5>
-            I have a good understanding of CSS and can style a simple website.
-          </h5>
-        </section>
-      </section>
-    </section>
-
-    <section id="portfolio" class="portfolio">
-      <h1>Portfolio</h1>
-
-      <section class="construction">
-        <img src="./assets/Error.svg" />
-        <h4>Portfolio Coming Soon!</h4>
-      </section>
-    </section>
-
-    <form
-      id="contacts"
-      class="connection"
-      action="https://formspree.io/f/mnqykzvq"
-      method="post"
-    >
-      <h1>Connect with me</h1>
-      <input class="email" type="email" name="email" placeholder="Email" />
-      <textarea class="message" name="message" placeholder="Message"></textarea>
-      <button type="submit" formtarget="_blank" class="send">Send</button>
-    </form>
-
-    <section class="contact-links">
-      <h1>Reach Me</h1>
-      <section class="links">
-        <a
-          href="https://www.linkedin.com/in/siphesihle-mnyengeza-873814220/"
-          target="_blank"
+        <form
+            id="contacts"
+            class="connection"
+            action="https://formspree.io/f/mnqykzvq"
+            method="post"
         >
-          <img alt="linkedin" src="./assets/LinkedIn.svg" />
-        </a>
-        <a href="https://github.com/Sphe29" target="_blank">
-          <img alt="github" src="./assets/GitHub.svg" />
-        </a>
-        <a href="mailto:sihle.mnyengeza@gmail.com">
-          <img alt="email" src="./assets/Email.svg" />
-        </a>
-      </section>
-    </section>
-  </body>
+            <h2>Connect with me</h2>
+            <input
+                class="email"
+                type="email"
+                name="email"
+                placeholder="Email"
+            >
+            <textarea class="message" name="message" placeholder="Message"></textarea>
+            <button type="submit" formtarget="_blank" class="send">Send</button>
+        </form>
+        <article class="contact-links">
+            <h1>Reach Me</h1>
+            <footer class="links">
+                <a href="https://www.linkedin.com/in/siphesihle-mnyengeza-873814220/" target="_blank">
+                    <img alt="linkedin" src="./assets/LinkedIn.svg">
+                </a>
+                <a href="https://github.com/Sphe29" target="_blank">
+                    <img alt="github" src="./assets/GitHub.svg">
+                </a>
+                <a href="mailto:sihle.mnyengeza@gmail.com">
+                    <img alt="email" src="./assets/Email.svg">
+                </a>
+            </footer>
+        </article>
+    </body>
 </html>
