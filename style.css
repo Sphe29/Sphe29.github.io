@@ -70,7 +70,7 @@ section .hero-section-picture img {
   background-repeat: no-repeat;
 }
 
-section .hero-section-bio {
+div .hero-section-bio {
   color: white;
   text-align: center;
 }
@@ -256,6 +256,10 @@ nav .bar {
 
   .aboutMe h1 {
     text-align: left;
+  }
+  .github-card, .html-card{
+    display: flex;
+    gap: 20px;
   }
 }
 @media (max-width: 768px) {
