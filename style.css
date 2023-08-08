@@ -282,11 +282,11 @@ nav .bar {
   nav .nav-menu {
     position: fixed;
     left: -111%;
-    top: 9%;
+    top: 9.9%;
     gap: 0;
     flex-direction: column;
     background-color: #212839;
-    height: 300px;
+    height: 270px;
     width: 100%;
     text-align: center;
     transition: 0.3s;
