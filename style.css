@@ -103,7 +103,7 @@ section .bio-container {
 section .bio {
   color: #acacac;
   padding-block: 30px;
-  padding-inline: 20px;
+  padding-inline: 30px;
 }
 
 .aboutMe {
@@ -111,7 +111,7 @@ section .bio {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 70px 40px;
+  padding: 70px 30px 10px 30px;
 }
 
 .aboutMe h1 {
@@ -129,12 +129,12 @@ section .bio {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 68px;
+  padding-top: 62px;
 }
 
 .skills h1 {
   color: #c682bf;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .portfolio,
@@ -169,7 +169,7 @@ section .bio {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 .connection h2 {
@@ -212,6 +212,7 @@ form .send {
 .contact-links h2 {
   color: #ffffff;
   margin-bottom: 20px;
+  margin-top: 50px;
 }
 
 .links a {
