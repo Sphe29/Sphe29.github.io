@@ -1,8 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;300&display=swap");
+
 body {
   background-color: #1d212e;
   margin: 0;
   font-family: Barlow, "sans-serif";
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -25,12 +30,15 @@ nav {
   left: 0;
   right: 0;
 }
+
 nav .sphe-logo {
   text-decoration: none;
 }
+
 nav h1 {
   color: white;
 }
+
 nav span {
   color: #c682bf;
 }
@@ -39,6 +47,7 @@ nav .hamBurger {
   cursor: pointer;
   display: none;
 }
+
 nav .nav-menu {
   display: flex;
   gap: 25px;
@@ -50,6 +59,7 @@ nav .nav-item {
   list-style-type: none;
   padding: 0;
 }
+
 nav .nav-link {
   color: white;
   text-decoration: none;
@@ -59,11 +69,13 @@ nav .nav-link {
 nav .nav-link:hover {
   color: #c682bf;
 }
+
 .hero-section {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .hero-section-picture img {
   width: 200px;
   margin-top: 100px;
@@ -83,6 +95,7 @@ section .intro {
   padding-inline: 20px;
   padding-top: 15px;
 }
+
 section .bio-container {
   max-width: 400px;
 }
@@ -98,23 +111,27 @@ section .bio {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5px 40px;
-  margin-top: 40px;
+  padding: 70px 40px;
 }
+
 .aboutMe h1 {
   color: #c682bf;
 }
+
 .aboutMe h5 {
   text-align: center;
   margin-block: 20px;
   width: 250 px;
 }
+
 .skills {
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 68px;
 }
+
 .skills h1 {
   color: #c682bf;
   margin-top: 20px;
@@ -146,6 +163,7 @@ section .bio {
   margin-block: 20px;
   width: 250px;
 }
+
 .connection {
   color: white;
   display: flex;
@@ -153,10 +171,12 @@ section .bio {
   align-items: center;
   margin-top: 80px;
 }
-.connection h1 {
-  color: #c682bf;
+
+.connection h2 {
+  color: #ffffff;
   margin-bottom: 20px;
 }
+
 form .email,
 .message {
   color: white;
@@ -170,6 +190,7 @@ form .email,
 form .message {
   height: 100px;
 }
+
 form .send {
   color: white;
   background-color: #c682bf;
@@ -187,7 +208,8 @@ form .send {
   align-items: center;
   margin-block: 30px;
 }
-.contact-links h1 {
+
+.contact-links h2 {
   color: #ffffff;
   margin-bottom: 20px;
 }
@@ -207,6 +229,7 @@ nav .bar {
 }
 
 @media (min-width: 700px) {
+
   .aboutMe h1,
   .skills h1,
   .portfolio h1,
@@ -214,12 +237,15 @@ nav .bar {
   .contact-links h1 {
     font-size: 35px;
   }
+
   .aboutMe h5 {
     font-size: 17px;
   }
+
   section .intro {
     font-size: 30px;
   }
+
   .top-card,
   .bottom-card {
     display: flex;
@@ -232,6 +258,7 @@ nav .bar {
     flex-direction: row-reverse;
     justify-content: center;
   }
+
   .hero-section-bio .bio {
     font-size: 20px;
     text-align: left;
@@ -242,6 +269,7 @@ nav .bar {
     text-align: left;
     max-width: 340px;
   }
+
   .hero-section-bio {
     margin-top: 120px;
     margin-right: 50px;
@@ -250,6 +278,7 @@ nav .bar {
   .aboutMe h5 {
     max-width: 720px;
   }
+
   .aboutMe {
     text-align: left;
   }
@@ -257,11 +286,14 @@ nav .bar {
   .aboutMe h1 {
     text-align: left;
   }
-  .github-card, .html-card{
+
+  .github-card,
+  .html-card {
     display: flex;
     gap: 20px;
   }
 }
+
 @media (max-width: 768px) {
   nav .hamBurger {
     display: block;
@@ -282,11 +314,11 @@ nav .bar {
   nav .nav-menu {
     position: fixed;
     left: -111%;
-    top: 9.9%;
+    top: 6.6%;
     gap: 0;
     flex-direction: column;
     background-color: #212839;
-    height: 270px;
+    height: 220px;
     width: 100%;
     text-align: center;
     transition: 0.3s;
@@ -300,7 +332,8 @@ nav .bar {
     left: 0;
     padding: 0;
   }
-  .bio-container .bio{
+
+  .bio-container .bio {
     padding-inline: 0;
   }
 }
