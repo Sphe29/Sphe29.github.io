@@ -1,22 +1,23 @@
-const random = document.getElementById("location");
+const myLocation = document.getElementById("myLocation");
 
 var endpoint = 'http://ip-api.com/json/24.48.0.1?fields=status,message,city';
 
 var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function() {
-	if (this.readyState == 4 && this.status == 200) {
-		var response = JSON.parse(this.responseText);
-		if(response.status !== 'success') {
-			console.log('query failed: ' + response.message);
-			return
-		}
-		if(response.countryCode == "US") {
-			window.random.replace("https://google.com/");
-		}
-		if(response.countryCode == "CA") {
-			window.random.replace("https://google.ca/");
-		}
-	}
+xhr.onreadystatechange = () => {
+    if (this.readyState == 4 && this.status == 200) {
+        var response = JSON.parse(this.responseText);
+        if (response.status !== 'success') {
+            console.log('query failed: ' + response.message);
+            return
+        }
+
+        myLocation.innerHTML = "You are at: " + response.city;
+
+        if (myLocation.countryCode == "US") {
+            myLocation.innerHTML = "Redirecting to Google...";
+        } 
+
+    }
 };
 xhr.open('GET', endpoint, true);
 xhr.send();
