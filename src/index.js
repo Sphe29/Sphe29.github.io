@@ -1,27 +1,44 @@
-const myLocation = document.getElementById("myLocation");
+  const myLocation = document.getElementById("myLocation");
+        const weatherElement = document.getElementById("weather");
 
-var endpoint = 'http://ip-api.com/json/24.48.0.1?fields=status,message,city';
+        function fetchLocation() {
+            fetch("https://api.ipify.org?format=json")
+                .then(response => response.json())
+                .then(data => {
+                    let userIP = data.ip;
+                    return fetch(`http://ip-api.com/json/${userIP}?fields=status,message,city,countryCode`);
+                })
+                .then(response => response.json())
+                .then(locationData => {
+                    if (locationData.status !== "success") {
+                        myLocation.innerHTML = "Location not found.";
+                        return;
+                    }
+                    myLocation.innerHTML = `You are at: ${locationData.city}, ${locationData.countryCode}`;
+                })
+                .catch(error => {
+                    console.error("Error fetching location:", error);
+                    myLocation.innerHTML = "Unable to get location.";
+                });
+        }
+        function fetchWeather() {
+            const apiKey = ""; 
+            const city = "Johannesburg";
 
-var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = () => {
-    if (this.readyState == 4 && this.status == 200) {
-        var response = JSON.parse(this.responseText);
-        if (response.status !== 'success') {
-            console.log('query failed: ' + response.message);
-            return
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+                .then(response => response.json())
+                .then(weatherData => {
+                    if (weatherData.cod !== 200) {
+                        weatherElement.innerHTML = "Weather data not available.";
+                        return;
+                    }
+                    weatherElement.innerHTML = `Weather in ${weatherData.name}: ${weatherData.weather[0].description}, ${weatherData.main.temp}°C`;
+                })
+                .catch(error => {
+                    console.error("Error fetching weather:", error);
+                    weatherElement.innerHTML = "Unable to get weather.";
+                });
         }
 
-        myLocation.innerHTML = "You are at: " + response.city;
-
-        if (myLocation.countryCode == "US") {
-            myLocation.innerHTML = "Redirecting to Google...";
-        } 
-
-    }
-};
-xhr.open('GET', endpoint, true);
-xhr.send();
-
-// let weather = document.getElementById("weather");
-// let weatherEndpoint = `https://api.openweathermap.org/data/2.5/weather?q={Johannesburg}&appid={2e0f0affa2f1dffc3136bd15e05a3af8}}`
-// document.getElementById("name").innerHTML = "Johannesburg";
+        fetchLocation();
+        fetchWeather();
