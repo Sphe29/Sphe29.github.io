@@ -2,18 +2,19 @@ const WEATHER_API_KEY = "2e0f0affa2f1dffc3136bd15e05a3af8";
 
 async function fetchLocation() {
   try {
-    const locationResponse = await fetch("http://ip-api.com/json/");
+    const locationResponse = await fetch("https://ipapi.co/json/");
     const locationData = await locationResponse.json();
 
-    if (locationData.status !== "success")
+    if (!locationData || !locationData.city || !locationData.latitude) {
       throw new Error("Location detection failed");
+    }
 
-    const { city, country, lat, lon } = locationData;
+    const { city, country_name, latitude, longitude } = locationData;
 
     document.getElementById(
       "myLocation"
-    ).innerText = `You are in: ${city}, ${country}`;
-    fetchWeather(lat, lon);
+    ).innerText = `You are in: ${city}, ${country_name}`;
+    fetchWeather(latitude, longitude);
   } catch (error) {
     console.error("Error fetching location:", error);
     document.getElementById("myLocation").innerText =
