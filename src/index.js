@@ -1,46 +1,44 @@
-const myLocation = document.getElementById("myLocation");
+ const WEATHER_API_KEY = 
+   async function fetchLocation() {
+            try {
+                // Fetch location dynamically from ip-api (No API key required)
+                const locationResponse = await fetch("http://ip-api.com/json/");
+                const locationData = await locationResponse.json();
 
-var endpoint = 'http://ip-api.com/json/24.48.0.1?fields=status,message,city';
+                if (locationData.status !== "success") throw new Error("Location detection failed");
 
-var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function () {
-    if (this.readyState === 4 && this.status === 200) {
-        var response = JSON.parse(this.responseText);
-        if (response.status !== 'success') {
-            console.log('query failed: ' + response.message);
-            return
+                const { city, country, lat, lon } = locationData;
+
+                document.getElementById("location").innerText = `You are in: ${city}, ${country}`;
+
+                fetchWeather(lat, lon);
+            } catch (error) {
+                console.error("Error fetching location:", error);
+                document.getElementById("location").innerText = "Unable to detect location.";
+                document.getElementById("weather-container").innerHTML = "<p>Could not fetch weather data.</p>";
+            }
         }
 
-        myLocation.innerHTML = "You are at: " + response.city + ", " + response.countryCode;
+        async function fetchWeather(lat, lon) {
+            try {
+                const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`);
+                const weatherData = await weatherResponse.json();
 
-        if (myLocation.countryCode == "US") {
-           window.location.href = "https://www.google.com";
-        } else if (myLocation.countryCode == "CA") {
-            window.location.href = "https://www.google.com";
+                if (weatherData.cod !== 200) throw new Error(weatherData.message);
+
+                const { temp } = weatherData.main;
+                const { description } = weatherData.weather[0];
+
+                document.getElementById("weather").innerHTML = `
+                    <h2>Weather in ${weatherData.name}</h2>
+                    <p>Temperature: ${temp}°C</p>
+                    <p>Condition: ${description}</p>
+                `;
+            } catch (error) {
+                console.error("Error fetching weather:", error);
+                document.getElementById("weather-container").innerHTML = "<p>Unable to fetch weather data.</p>";
+            }
         }
 
-        getWeather(response.city);
-    }
-};
-xhr.open('GET', endpoint, true);
-xhr.send();
-
-function getWeather(city ) {
-    const apiKey = "2e0f0affa2f1dffc3136bd15e05a3af8";
-let weatherEndpoint = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
-
-fetch(weatherEndpoint)
-    .then((response) => response.json())
-    .then((data) => {
-        console.log(data);
-        let temperature = data.main.temp;
-        let description = data.weather[0].description;
-        let icon = data.weather[0].icon;
-        let iconUrl = `http://openweathermap.org/img/w/${icon}.png`;
-
-        weather.innerHTML = `It is currently ${temperature} degrees with ${description} in ${city}. <img src="${iconUrl}" alt="weather icon">`;
-    })
-    .catch((error) => {
-        console.log(error);
-    });
-}
+        // Start process
+        fetchLocation();
