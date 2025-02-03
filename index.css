@@ -79,7 +79,10 @@ section .bio {
   padding-inline: 30px;
 }
 
-.aboutMe {
+.aboutMe,
+.experiences,
+.locate,
+.weather {
   color: white;
   display: flex;
   flex-direction: column;
