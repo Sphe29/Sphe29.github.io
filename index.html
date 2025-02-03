@@ -1,131 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="index.css">
-        <title>Professional Profile</title>
-    </head>
-    <body>
-        <nav>
-            <a class="sphe-logo" href="#">
-                <h1>
-                    Professional
-                    <span>Profile</span>
-                </h1>
-            </a>
-        </nav>
-        <div id="home" class="hero-section">
-            <div class="hero-section-picture">
-                <img src="./assets/sphe.png" class="sphe-pic" alt="myPicture">
-            </div>
-            <div class="hero-section-bio">
-                <section class="intro-container">
-                    <h1 class="intro">Hello! My name is Siphesihle Mnyengeza.</h1>
-                </section>
-                <section class="bio-container">
-                    <h4 class="bio">
-                        I am currently doing an internship at BBD for a web development
-            program.
-                    </h4>
-                </section>
-            </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Professional Profile</title>
+</head>
+
+<body>
+    <nav>
+        <a class="sphe-logo" href="#">
+            <h1>
+                Professional
+                <span>Profile</span>
+            </h1>
+        </a>
+    </nav>
+    <div id="home" class="hero-section">
+        <div class="hero-section-picture">
+            <img src="./assets/sphe.png" class="sphe-pic" alt="myPicture">
         </div>
-        <section id="aboutme" class="aboutMe">
-            <h2>About me</h2>
-            <h5>
-                I am an aspiring Web Developer with strong communication skills and a
-        foundational understanding of Node.js. I excel in collaborative
-        environments, continuously expanding my knowledge to tackle real-world
-        challenges. I thrive in team settings, enjoy networking with fellow tech
-        enthusiasts, and am committed to building meaningful professional
-        relationships.
-            </h5>
-        </section>
-        <section id="skills" class="skills">
-            <h2>Skills</h2>
-            <div class="github-card">
-                <section class="githubCard">
-                    <img src="./assets/GitHub.svg" class="github-icon" alt=" GITHUB icon ">
-                    <h4>Git Version Control</h4>
-                    <h5>
-                        Proficient in Git workflows, ensuring smooth collaboration and
-            efficient project management.
-                    </h5>
-                </section>
-                <section class="jsCard">
-                    <img src="./assets/JavaScript.svg" class="javascript-icon" alt=" JS Icon">
-                    <h4>Javascript</h4>
-                    <h5>
-                        Good foundation in JavaScript, with experience in problem-solving
-            and building interactive web applications.
-                    </h5>
-                </section>
-            </div>
-            <div class="html-card">
-                <section class="htmlCard">
-                    <img src="./assets/Html5.svg" class="html-icon" alt=" HTML Icon">
-                    <h4>HTML</h4>
-                    <h5>
-                        I have a good understanding of HTML basics and can build a simple
-            website.
-                    </h5>
-                </section>
-                <section class="cssCard">
-                    <img src="./assets/CSS3.svg" class="css-icon" alt=" CSS Icon">
-                    <h4>CSS</h4>
-                    <h5>
-                        I have a good understanding of CSS and can style a simple website.
-                    </h5>
-                </section>
-                <section class="reactCard">
-                    <img src="./assets/React.svg" class="react-icon" alt="React Icon">
-                    <h4>React.js</h4>
-                    <h5>
-                        Capable of building dynamic and scalable web applications using
-            React, Redux, and modern UI libraries.
-                    </h5>
-                </section>
-                <section class="reactNativeCard">
-                    <img src="./assets/ReactNative.svg" class="react-native-icon" alt="React Native Icon">
-                    <h4>React Native</h4>
-                    <h5>
-                        Experienced in developing cross-platform mobile applications with
-            React Native.
-                    </h5>
-                </section>
-            </div>
-        </section>
-        <form
-            id="contacts"
-            class="connection"
-            action="https://formspree.io/f/mnqykzvq"
-            method="post"
-        >
-            <h2>Connect with me</h2>
-            <input
-                class="email"
-                type="email"
-                name="email"
-                placeholder="Email"
-            >
-            <textarea class="message" name="message" placeholder="Message"></textarea>
-            <button type="submit" formtarget="_blank" class="send">Send</button>
-        </form>
-        <article class="contact-links">
-            <h2>Reach me</h2>
-            <footer class="links">
-                <a href="https://www.linkedin.com/in/siphesihle-mnyengeza-873814220/" target="_blank">
-                    <img alt="linkedin" src="./assets/LinkedIn.svg">
-                </a>
-                <a href="https://github.com/Sphe29" target="_blank">
-                    <img alt="github" src="./assets/GitHub.svg">
-                </a>
-                <a href="mailto:sihle.mnyengeza@gmail.com">
-                    <img alt="email" src="./assets/Email.svg">
-                </a>
-            </footer>
-        </article>
-    </body>
+        <div class="hero-section-bio">
+            <section class="intro-container">
+                <h1 class="intro" id="name">Hello! My name is Siphesihle Mnyengeza.</h1>
+            </section>
+            <section class="bio-container">
+                <h4 class="bio">
+                    I am currently doing an internship at BBD for a web development
+                    program.
+                </h4>
+            </section>
+        </div>
+    </div>
+    <section id="locate" class="locate">
+        <h2>It looks like...</h2>
+        <p id="myLocation">Determining your location...</p>
+        <p id="weather"> Fetching weather...</p>
+    </section>
+
+    <section id="aboutme" class="aboutMe">
+        <h2>About me</h2>
+        <h5>
+            I am an aspiring Web Developer from Johannesburg with strong communication skills and a
+            foundational understanding of Node.js. I excel in collaborative
+            environments, continuously expanding my knowledge to tackle real-world
+            challenges. I thrive in team settings, enjoy networking with fellow tech
+            enthusiasts, and am committed to building meaningful professional
+            relationships.
+        </h5>
+    </section>
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="github-card">
+            <section class="githubCard">
+                <img src="./assets/GitHub.svg" class="github-icon" alt=" GITHUB icon ">
+                <h4>Git Version Control</h4>
+                <h5>
+                    Proficient in Git workflows, ensuring smooth collaboration and
+                    efficient project management.
+                </h5>
+            </section>
+            <section class="jsCard">
+                <img src="./assets/JavaScript.svg" class="javascript-icon" alt=" JS Icon">
+                <h4>Javascript</h4>
+                <h5>
+                    Good foundation in JavaScript, with experience in problem-solving
+                    and building interactive web applications.
+                </h5>
+            </section>
+        </div>
+        <div class="html-card">
+            <section class="htmlCard">
+                <img src="./assets/Html5.svg" class="html-icon" alt=" HTML Icon">
+                <h4>HTML</h4>
+                <h5>
+                    I have a good understanding of HTML basics and can build a simple
+                    website.
+                </h5>
+            </section>
+            <section class="cssCard">
+                <img src="./assets/CSS3.svg" class="css-icon" alt=" CSS Icon">
+                <h4>CSS</h4>
+                <h5>
+                    I have a good understanding of CSS and can style a simple website.
+                </h5>
+            </section>
+            <section class="reactCard">
+                <img src="./assets/React.svg" class="react-icon" alt="React Icon">
+                <h4>React.js</h4>
+                <h5>
+                    Capable of building dynamic and scalable web applications using
+                    React, Redux, and modern UI libraries.
+                </h5>
+            </section>
+            <section class="reactNativeCard">
+                <img src="./assets/ReactNative.svg" class="react-native-icon" alt="React Native Icon">
+                <h4>React Native</h4>
+                <h5>
+                    Experienced in developing cross-platform mobile applications with
+                    React Native.
+                </h5>
+            </section>
+        </div>
+    </section>
+    <section id="experiences" class="experiences">
+        <h2>Work Experience</h2>
+        <ul>
+            <li>
+                <h3>Intern</h3>
+                <h4>BBD</h4>
+                <h5>2025 (Feb) - Present</h5>
+                <h5>
+                    I am currently doing an internship at BBD for a web development
+                    program.
+                </h5>
+            </li>
+            <li>
+                <h3>Technical Intern</h3>
+                <h4>Cell C</h4>
+                <h5>2022 (Oct) - 2023 (Feb) </h5>
+                <h5>
+                    Attending to calls with regards to technical difficulties with equipment, connectivity or devices
+                    for clients.
+                </h5>
+            </li>
+            <li>
+                <h3>Secretary General</h3>
+                <h4>SAIEE - VUT</h4>
+                <h5>2019 (Oct) - 2022 (Feb) </h5>
+                <h5>
+                    Secretary Duties, Marketing and Event Planning.
+                </h5>
+            </li>
+        </ul>
+
+    </section>
+    <form id="contacts" class="connection" action="https://formspree.io/f/mnqykzvq" method="post">
+        <h2>Connect with me</h2>
+        <input class="email" type="email" name="email" placeholder="Email">
+        <textarea class="message" name="message" placeholder="Message"></textarea>
+        <button type="submit" formtarget="_blank" class="send">Send</button>
+    </form>
+    <article class="contact-links">
+        <h2>Reach me</h2>
+        <footer class="links">
+            <a href="https://www.linkedin.com/in/siphesihle-mnyengeza-873814220/" target="_blank">
+                <img alt="linkedin" src="./assets/LinkedIn.svg">
+            </a>
+            <a href="https://github.com/Sphe29" target="_blank">
+                <img alt="github" src="./assets/GitHub.svg">
+            </a>
+            <a href="mailto:sihle.mnyengeza@gmail.com">
+                <img alt="email" src="./assets/Email.svg">
+            </a>
+
+        </footer>
+
+    </article>
+    <script src="./src/index.js"></script>
+</body>
+
 </html>
