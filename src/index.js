@@ -22,7 +22,7 @@
                 });
         }
         function fetchWeather() {
-            const apiKey = ""; 
+            const apiKey = "2e0f0affa2f1dffc3136bd15e05a3af8";
             const city = "Johannesburg";
 
             fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
