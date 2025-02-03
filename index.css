@@ -81,6 +81,13 @@ section .bio {
   padding-inline: 30px;
 }
 
+p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px
+}
+
 .aboutMe,
 .experiences,
 .locate,
@@ -167,6 +174,7 @@ form .send {
 }
 
 @media (min-width: 700px) {
+
   .aboutMe h1,
   .skills h1,
   .portfolio h1,
