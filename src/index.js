@@ -1,45 +1,50 @@
-const myLocation = document.getElementById("myLocation");
-const weatherElement = document.getElementById("weather");
+const WEATHER_API_KEY = "2e0f0affa2f1dffc3136bd15e05a3af8";
 
-function fetchLocation() {
-    fetch("https://api.ipify.org?format=json")
-        .then(response => response.json())
-        .then(data => {
-            let userIP = data.ip;
-            return fetch(`http://ip-api.com/json/${userIP}?fields=status,message,city,countryCode`);
-        })
-        .then(response => response.json())
-        .then(locationData => {
-            if (locationData.status !== "success") {
-                myLocation.innerHTML = "Location not found.";
-                return;
-            }
-            myLocation.innerHTML = `You are at: ${locationData.city}, ${locationData.countryCode}`;
-        })
-        .catch(error => {
-            console.error("Error fetching location:", error);
-            myLocation.innerHTML = "We are unable to get your location. Please check permissions to access location...";
-        });
+async function fetchLocation() {
+  try {
+    const locationResponse = await fetch("http://ip-api.com/json/");
+    const locationData = await locationResponse.json();
+
+    if (locationData.status !== "success")
+      throw new Error("Location detection failed");
+
+    const { city, country, lat, lon } = locationData;
+
+    document.getElementById(
+      "myLocation"
+    ).innerText = `You are in: ${city}, ${country}`;
+    fetchWeather(lat, lon);
+  } catch (error) {
+    console.error("Error fetching location:", error);
+    document.getElementById("myLocation").innerText =
+      "Unable to detect location.";
+    document.getElementById("weather").innerHTML =
+      "Could not fetch weather data.";
+  }
 }
 
-function fetchWeather() {
-    const apiKey = "2e0f0affa2f1dffc3136bd15e05a3af8";
-    const city = "Your Area";
+async function fetchWeather(lat, lon) {
+  try {
+    const weatherResponse = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
+    );
+    const weatherData = await weatherResponse.json();
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
-        .then(response => response.json())
-        .then(weatherData => {
-            if (weatherData.cod !== 200) {
-                weatherElement.innerHTML = "Weather data not available.";
-                return;
-            }
-            weatherElement.innerHTML = `Weather in ${weatherData.name}: ${weatherData.weather[0].description}, ${weatherData.main.temp}°C`;
-        })
-        .catch(error => {
-            console.error("Error fetching weather:", error);
-            weatherElement.innerHTML = "Unable to get weather.";
-        });
+    if (weatherData.cod !== 200) throw new Error(weatherData.message);
+
+    const { temp } = weatherData.main;
+    const { description } = weatherData.weather[0];
+
+    document.getElementById("weather").innerHTML = `
+            <h2>Weather in ${weatherData.name}</h2>
+            <p>Temperature: ${temp}°C</p>
+            <p>Condition: ${description}</p>
+        `;
+  } catch (error) {
+    console.error("Error fetching weather:", error);
+    document.getElementById("weather").innerHTML =
+      "Unable to fetch weather data.";
+  }
 }
 
 fetchLocation();
-fetchWeather();
